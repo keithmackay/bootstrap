@@ -9,9 +9,19 @@ description: Use when starting a new software project from scratch — copies te
 
 Bootstraps a new project end-to-end: template copy → README → git setup → GitHub repo (optional) → design session → implementation plan.
 
+## Help
+
+If I invoke this skill with `--help` (or otherwise ask how to use it), don't run the bootstrap flow. Instead, explain:
+
+- What the skill does: copies a bundled template into a new project directory, sets up a README, initializes git, optionally creates a GitHub remote, then runs a guided design session and writes a phased implementation plan.
+- How to run it: invoke `/bootstrap` from inside an empty (or new) project directory.
+- How to customize the template: the files copied into every new project live in the `template/` folder bundled alongside this skill (i.e. `template/` next to this `SKILL.md` — find it by locating where this skill is installed, e.g. `~/.claude/skills/bootstrap/template/` in Claude Code). To change what gets copied into future projects, edit, add, or remove files directly inside that `template/` folder. There is no per-project template override — every project bootstrapped with this skill pulls from that one shared location.
+
+Then stop — do not proceed to the Instructions section below.
+
 ## Instructions
 
-Begin by copying everything recursively from `../template` (resolved relative to the current project folder, i.e. the sibling `template` directory next to this project's own folder — NOT relative to this skill file's location) to this project folder. If that sibling `template` folder doesn't exist, fall back to the `template/` folder bundled with this skill instead. Users can customize either location with their own folder structure or files for future bootstraps. Once copied, update the project name in all project files in this folder to the name of the current project.
+Begin by copying everything recursively from the `template/` folder bundled with this skill (resolved relative to this skill file's own location, e.g. `template/` next to this `SKILL.md`) to this project folder. Do not look for or use any project-relative `template` folder — only the bundled one. Once copied, update the project name in all project files in this folder to the name of the current project.
 
 Once the template is copied, ask me two questions:
 

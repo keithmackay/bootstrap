@@ -5,6 +5,7 @@ Bootstraps a new software project from scratch: copies template files, sets up R
 ## Highlights
 
 - **One command, full setup** — template copy, README, git init, and an optional GitHub remote (public or private) all happen before any design discussion starts
+- **Bundled, editable template** — every new project is seeded from the `template/` folder shipped with this skill; customize it once and every future `/bootstrap` picks up the change
 - **Guided design session** — asks one question at a time to refine a raw idea into a concrete spec, rather than demanding a fully-formed plan up front
 - **Implementation-ready output** — produces a detailed, phased plan in `docs/plans/` plus a concise `PHASES_SUMMARY.md`, written for an engineer with zero context on the codebase
 - **Idea provenance tracked** — every "Next Steps" enhancement idea in the generated plan is tagged `[Keith's idea]` or `[Claude's idea]`, so it's clear whose thinking drove which direction
@@ -13,12 +14,18 @@ Bootstraps a new software project from scratch: copies template files, sets up R
 
 Invoke `/bootstrap` from a fresh project directory. It walks through:
 
-1. Copies everything from `../template` into the current directory and updates the project name throughout
+1. Copies everything from the bundled `template/` folder (next to `SKILL.md`) into the current directory and updates the project name throughout
 2. Asks whether to create a GitHub remote, and if so, public or private (defaults: yes / private)
 3. Asks what you're building, then generates a starter `README.md` (Description, Installation, Usage, License placeholders)
 4. Initializes git, ensures `.envrc` is gitignored, commits, and pushes to the remote if one was requested
 5. Enters a design session — one question at a time — until the idea is well-defined
 6. Writes a full phased implementation plan to `docs/plans/`, plus a `PHASES_SUMMARY.md` quick-reference
+
+Run `/bootstrap --help` (or just ask how to use it) for an in-chat explanation of the above, including where the bundled template lives.
+
+### Customizing the template
+
+Every project bootstrapped with this skill is seeded from a single shared `template/` folder bundled alongside `SKILL.md` (e.g. `~/.claude/skills/bootstrap/template/` in Claude Code). To change what new projects start with, edit, add, or remove files directly inside that `template/` folder — there's no per-project override. Common additions: a house-style `CLAUDE.md`/`AGENTS.md`, default `.claude/commands/`, testing guidelines, or boilerplate config.
 
 ## Installation
 
