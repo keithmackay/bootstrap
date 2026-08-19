@@ -1,0 +1,6 @@
+{
+  "name": "bootstrap",
+  "version": "1.0.0",
+  "description": "Use when starting a new software project from scratch — copies template files, sets up README, initializes git, optionally creates a GitHub repo, then guides through idea refinement, design, spec, and full implementation planning.",
+  "skills": "./skills/"
+}

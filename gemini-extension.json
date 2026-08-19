@@ -1,0 +1,6 @@
+{
+  "name": "bootstrap",
+  "description": "Use when starting a new software project from scratch — copies template files, sets up README, initializes git, optionally creates a GitHub repo, then guides through idea refinement, design, spec, and full implementation planning.",
+  "version": "1.0.0",
+  "contextFileName": "GEMINI.md"
+}
