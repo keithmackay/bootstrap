@@ -11,7 +11,7 @@ Bootstraps a new project end-to-end: template copy → README → git setup → 
 
 ## Instructions
 
-Begin by copying everything recursively from `../template` to this project folder, then update the project name in all project files in this folder to the name of the current project.
+Begin by copying everything recursively from `../template` (resolved relative to the current project folder, i.e. a sibling `template` directory next to this project's own folder — NOT relative to this skill file's location) to this project folder. If that sibling `template` folder doesn't exist, fall back to the `template/` folder bundled with this skill instead. Users can customize either location with their own folder structure or files for future bootstraps. Once copied, update the project name in all project files in this folder to the name of the current project.
 
 Once the template is copied, ask me two questions:
 
