@@ -9,15 +9,11 @@ description: Use when starting a new software project from scratch — copies te
 
 Bootstraps a new project end-to-end: template copy → README → git setup → GitHub repo (optional) → design session → implementation plan.
 
-## Help
+## Flags
 
-If I invoke this skill with `--help` (or otherwise ask how to use it), don't run the bootstrap flow. Instead, explain:
+### `--help`
 
-- What the skill does: copies a bundled template into a new project directory, sets up a README, initializes git, optionally creates a GitHub remote, then runs a guided design session and writes a phased implementation plan.
-- How to run it: invoke `/bootstrap` from inside an empty (or new) project directory.
-- How to customize the template: the files copied into every new project live in the `template/` folder bundled alongside this skill (i.e. `template/` next to this `SKILL.md` — find it by locating where this skill is installed, e.g. `~/.claude/skills/bootstrap/template/` in Claude Code). To change what gets copied into future projects, edit, add, or remove files directly inside that `template/` folder. There is no per-project template override — every project bootstrapped with this skill pulls from that one shared location.
-
-Then stop — do not proceed to the Instructions section below.
+If the user invokes this skill with a `--help` flag (e.g. `/bootstrap --help`), do not run the bootstrap flow. Instead, read and display the contents of `help.md` (in this skill's folder) verbatim, then stop — do not proceed to the Instructions section below.
 
 ## Instructions
 
