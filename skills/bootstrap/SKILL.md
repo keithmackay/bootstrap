@@ -71,6 +71,7 @@ Give them the whole plan as numbered phases broken into bite-sized, numbered tas
 Write the full detailed plan into `docs/plans/`.
 
 After writing the detailed plan, create a `PHASES_SUMMARY.md` file in `docs/plans/` with:
+- A "Current Status" table listing every phase with a status marker (🔲 Not Started / 🟨 In Progress / ✅ Complete) — the bundled `/next` command reads this table to find the next phase to work on, so keep it up to date as phases progress
 - Each phase number, title, and goal
 - List of tasks per phase (brief descriptions)
 - Key deliverables for each phase

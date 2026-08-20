@@ -64,7 +64,7 @@ For each task:
 4. **Check for Required Files**:
    - Verify all deliverables mentioned in the documentation exist
    - Check database migrations if applicable
-   - Verify UI screens/widgets were created as specified
+   - Verify UI screens/components were created as specified
 
 ## Step 4: Compare Against Requirements
 
