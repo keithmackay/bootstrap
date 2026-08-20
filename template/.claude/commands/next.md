@@ -6,8 +6,7 @@ Once you've identified the next phase:
 
 1. Read ONLY the relevant sections from the planning documents for that specific phase:
    - The phase section in PHASES_SUMMARY.md
-   - The corresponding phase section in docs/plans/IMPLEMENTATION_PLAN_PHASE2_PLUS.md (if it exists)
-   - Any detailed phase-specific documents like docs/plans/PHASE_X_DETAILED.md (if they exist)
+   - The corresponding phase section in the detailed implementation plan document(s) in docs/plans/
 
 2. Understand the phase goals, deliverables, and key tasks
 

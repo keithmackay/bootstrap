@@ -1,4 +1,4 @@
-You are reviewing code development for specific tasks in the HabitPeeps project.
+You are reviewing code development for specific tasks in this project.
 
 **CRITICAL: You MUST perform a complete, thorough review of all selected tasks, even if:**
 - Progress documents indicate the task is "complete" or "reviewed"
@@ -36,13 +36,7 @@ For each task to review:
    - Acceptance criteria
    - Current status
 
-2. Check for detailed phase documentation:
-   - Look for `docs/plans/PHASE_X_DETAILED.md` (where X is the phase number)
-   - If it exists, read it for detailed task requirements
-
-3. Read relevant sections from:
-   - `docs/plans/IMPLEMENTATION_PLAN_PHASE2_PLUS.md` (for phases 2+)
-   - `docs/plans/IMPLEMENTATION_PLAN.md` (for phases 0-1)
+2. Read the relevant sections of the detailed implementation plan document(s) in `docs/plans/` for the phase being reviewed
 
 ## Step 3: Review Implementation
 
@@ -63,7 +57,7 @@ For each task:
 
 3. **Review Tests**:
    - Check for test files associated with the implementation
-   - Run `flutter test` to verify current test status
+   - Run the project's test suite to verify current test status
    - Look for test coverage of the new features
    - Verify TDD was followed (tests written first)
 
