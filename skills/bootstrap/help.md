@@ -10,6 +10,13 @@ WHAT IT NEEDS
   - Run from inside an empty (or new) project directory
   - `gh` CLI installed and authenticated, if creating a GitHub remote
 
+RUNNING IT AGAIN
+  Safe to re-run on a project that's already been bootstrapped. It
+  detects existing setup (README.md, .git, docs/plans/) and asks before
+  proceeding; it won't overwrite existing files, re-init git, duplicate
+  .gitignore entries, create empty commits, or recreate a GitHub remote
+  that already exists.
+
 HOW TO CUSTOMIZE THE TEMPLATE
   The files copied into every new project live in the template/ folder
   bundled alongside this skill (i.e. template/ next to this SKILL.md —

@@ -17,7 +17,15 @@ If the user invokes this skill with a `--help` flag (e.g. `/bootstrap --help`), 
 
 ## Instructions
 
-Begin by copying everything recursively from the `template/` folder bundled with this skill (resolved relative to this skill file's own location, e.g. `template/` next to this `SKILL.md`) to this project folder. Do not look for or use any project-relative `template` folder — only the bundled one. Once copied, update the project name in all project files in this folder to the name of the current project.
+### Re-run safety check
+
+Before doing anything else, check whether this project has already been bootstrapped (e.g. a `README.md`, a `.git` directory, or `docs/plans/` already exist in this folder). If it looks like bootstrap has already run here, stop and tell me what already exists, then ask whether I want to:
+- Cancel, or
+- Re-run anyway (in which case, treat every step below as idempotent per the notes inline — never blindly overwrite or duplicate existing work)
+
+Do not silently overwrite existing files or redo already-completed setup steps.
+
+Begin by copying everything recursively from the `template/` folder bundled with this skill (resolved relative to this skill file's own location, e.g. `template/` next to this `SKILL.md`) to this project folder. For any file that already exists at the destination, skip it (do not overwrite) and tell me which files were skipped — do not blindly clobber files I or a prior run may have already customized. Once copied, update the project name in all newly-copied project files in this folder to the name of the current project.
 
 Once the template is copied, ask me two questions:
 
@@ -31,21 +39,20 @@ Once the template is copied, ask me two questions:
 
 Store these preferences for later use.
 
-Next, I have an idea I want to talk through with you. Ask me what we're going to build. Once I describe the idea, create a README.md file at the project root with:
+Next, I have an idea I want to talk through with you. Ask me what we're going to build. Once I describe the idea, create a README.md file at the project root — but only if one doesn't already exist. If `README.md` already exists, show me its current contents and ask whether to leave it as-is or replace it, rather than overwriting it automatically. A new README should have:
 - Project name as the title
 - A "Description" section with the idea I described
 - An "Installation" section (placeholder)
 - A "Usage" section (placeholder)
 - A "License" section (placeholder)
 
-After creating the README.md, initialize git (if not already initialized). If a git repo is being created (or was just initialized), ensure `.envrc` is listed in `.gitignore` (append it if the file exists but doesn't already include it; create the file with that entry if it doesn't exist).
+After handling the README, initialize git only if `.git` doesn't already exist in this folder. Ensure `.envrc` is listed in `.gitignore` (append it if the file exists but doesn't already include it; create the file with that entry if it doesn't exist) — check first so the entry isn't duplicated on a re-run.
 
-Commit all files with the message "Initial project setup with README".
+Check `git status` for staged/unstaged changes before committing. Only create a commit if there is something to commit — an empty repo with nothing changed since the last commit should not produce an empty commit. Use the message "Initial project setup with README" only for the very first commit in a fresh repo; if a commit history already exists, use a message describing what actually changed instead.
 
 If I requested a remote GitHub repository:
-- Create the remote repo using `gh repo create` with the project folder name
-- Set visibility to public or private based on my earlier answer
-- Push the initial commit to the remote
+- First check whether a remote named `origin` already exists (`git remote -v`). If it does, skip creation and tell me it's already configured rather than erroring out on `gh repo create`.
+- Otherwise, create the remote repo using `gh repo create` with the project folder name, set visibility to public or private based on my earlier answer, and push the initial commit to the remote.
 
 Once the repository setup is complete, let me know, then enter planning mode to begin the design session.
 
