@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 - Move --help content to help.md for progressive disclosure
 - Make bootstrap safe to re-run on an already-bootstrapped project
+- Add CHANGELOG.md seeded from commit history
+- Bundle a CHANGELOG.md seed in the template for future bootstrapped projects
 - Genericize bootstrap template files, remove HabitPeeps/Flutter specifics
 - Fix remaining Flutter-specific term and undocumented PHASES_SUMMARY table
 - Remove old pre-skill bootstrap command, superseded by SKILL.md
