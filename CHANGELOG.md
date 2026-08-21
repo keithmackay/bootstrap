@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+- Add Changelog section to README linking CHANGELOG.md
 - Move --help content to help.md for progressive disclosure
 - Make bootstrap safe to re-run on an already-bootstrapped project
 - Add CHANGELOG.md seeded from commit history
