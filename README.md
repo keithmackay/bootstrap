@@ -100,6 +100,10 @@ Legend: ✅ Supported · ❌ Not supported
 
 This is a personal skill, but improvements are welcome — fork, branch, and open a pull request.
 
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for release history.
+
 ## License
 
 [MIT](LICENSE)
